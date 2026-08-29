@@ -17,7 +17,7 @@ dp = Dispatcher()
 # Подключение к API GLM
 glm_client = AsyncOpenAI(
     api_key=GLM_API_KEY,
-    base_url="https://api.now.cc"
+    base_url="https://api.now.cc/v1"
 )
 
 # Память последних 10 сообщений для каждого чата
