@@ -8,13 +8,13 @@ from openai import AsyncOpenAI
 # ================= КОНФИГУРАЦИЯ =================
 BOT_TOKEN = "8481958068:AAFE9J7kNfhDCxcmuez6luH-sC-Zii9YQyo"
 GLM_API_KEY = "sk-11fwy5uldzth9160xtlpqpooqx66qp7h"
-MODEL_ID = "deepseek-v4-flash"  # Укажи нужный ID: glm-4-plus, glm-4-air, glm-4v, glm-5.2 и т.д.
+MODEL_ID = "deepseek-v4-flash"  # Укажи нужный ID модели
 # ===============================================
 
 bot = Bot(token=BOT_TOKEN)
 dp = Dispatcher()
 
-# Подключение к API GLM
+# Подключение к API
 glm_client = AsyncOpenAI(
     api_key=GLM_API_KEY,
     base_url="https://api.b.ai/v1"
@@ -104,7 +104,9 @@ async def handle_messages(message: types.Message):
 
 async def main():
     print(f"Бот арены запущен. Используемая модель: {MODEL_ID}")
-    await dp.start_polling(bot)
+    # Сбрасываем все накопившиеся старые сообщения перед стартом
+    await bot.delete_webhook(drop_pending_updates=True)
+    await dp.start_polling(bot, drop_pending_updates=True)
 
 if __name__ == "__main__":
     asyncio.run(main())
