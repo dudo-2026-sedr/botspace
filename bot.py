@@ -7,8 +7,8 @@ from openai import AsyncOpenAI
 
 # ================= КОНФИГУРАЦИЯ =================
 BOT_TOKEN = "8481958068:AAFE9J7kNfhDCxcmuez6luH-sC-Zii9YQyo"
-GLM_API_KEY = "sk-usoNqhK6OKMBi8zBC9eGI4gbR6ZL4BeU1kzkJ47tWj5wF1Xf"
-MODEL_ID = "gemini-3.7-flash-high"  # Укажи нужный ID: glm-4-plus, glm-4-air, glm-4v, glm-5.2 и т.д.
+GLM_API_KEY = "sk-Fr4DsSTS3QC2Yf8W3ybkqwiimxFJW6z5DDW1A3wEv21IvfZr"
+MODEL_ID = "glm-5-2"  # Укажи нужный ID: glm-4-plus, glm-4-air, glm-4v, glm-5.2 и т.д.
 # ===============================================
 
 bot = Bot(token=BOT_TOKEN)
@@ -17,7 +17,7 @@ dp = Dispatcher()
 # Подключение к API GLM
 glm_client = AsyncOpenAI(
     api_key=GLM_API_KEY,
-    base_url="https://api.now.cc/v1"
+    base_url="https://seekai.cc/v1"
 )
 
 # Память последних 10 сообщений для каждого чата
