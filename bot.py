@@ -8,7 +8,7 @@ from openai import AsyncOpenAI
 # ================= КОНФИГУРАЦИЯ =================
 BOT_TOKEN = "8481958068:AAFE9J7kNfhDCxcmuez6luH-sC-Zii9YQyo"
 GLM_API_KEY = "sk-usoNqhK6OKMBi8zBC9eGI4gbR6ZL4BeU1kzkJ47tWj5wF1Xf"
-MODEL_ID = "gemini-3.7-flash-high"  # Укажи нужный ID модели
+MODEL_ID = "gemini-3.7-flash"  # Укажи нужный ID модели
 # ===============================================
 
 bot = Bot(token=BOT_TOKEN)
