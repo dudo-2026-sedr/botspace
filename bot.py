@@ -7,8 +7,8 @@ from openai import AsyncOpenAI
 
 # ================= КОНФИГУРАЦИЯ =================
 BOT_TOKEN = "8481958068:AAFE9J7kNfhDCxcmuez6luH-sC-Zii9YQyo"
-GLM_API_KEY = "sk-2RXG2ZoxbkDyDSv1ECu8xUX773eEIR06X4VkWqSsi3Qup5Yo"
-MODEL_ID = "claude-opus-4-8"  # Укажи нужный ID модели
+GLM_API_KEY = "sk-1cnt5gQRNJZyE9GuQXzsQ7fLx4wN2UVTnL4zAjWn7QurRdlb"
+MODEL_ID = "gpt-5.2-chat"  # Укажи нужный ID модели
 # ===============================================
 
 bot = Bot(token=BOT_TOKEN)
@@ -17,7 +17,7 @@ dp = Dispatcher()
 # Подключение к API
 glm_client = AsyncOpenAI(
     api_key=GLM_API_KEY,
-    base_url="https://tabitoken.com/v1"
+    base_url="https://api.bluesminds.com/v1"
 )
 
 # Память последних 10 сообщений для каждого чата
