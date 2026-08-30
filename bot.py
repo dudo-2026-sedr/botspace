@@ -7,8 +7,8 @@ from openai import AsyncOpenAI
 
 # ================= КОНФИГУРАЦИЯ =================
 BOT_TOKEN = "8481958068:AAFE9J7kNfhDCxcmuez6luH-sC-Zii9YQyo"
-GLM_API_KEY = "sk-ttSmmsyLEXypai1vOZveMirRCDzq4jp8iQqP5i9xF0Tv4BIB"
-MODEL_ID = "gpt-5.6-terra"  # Укажи нужный ID модели
+GLM_API_KEY = "sk-dEN9JSOtr8JjITQMP56QEQzdt29GkYmQWjCVTW0TzEpnZXDf"
+MODEL_ID = "gw/gpt-5-5-mini"  # Укажи нужный ID модели
 # ===============================================
 
 bot = Bot(token=BOT_TOKEN)
@@ -17,7 +17,7 @@ dp = Dispatcher()
 # Подключение к API
 glm_client = AsyncOpenAI(
     api_key=GLM_API_KEY,
-    base_url="https://newapi.cursorlao.online/v1"
+    base_url="https://htai91.com/v1"
 )
 
 # Память последних 10 сообщений для каждого чата
