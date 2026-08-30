@@ -7,8 +7,8 @@ from openai import AsyncOpenAI
 
 # ================= КОНФИГУРАЦИЯ =================
 BOT_TOKEN = "8481958068:AAFE9J7kNfhDCxcmuez6luH-sC-Zii9YQyo"
-GLM_API_KEY = "sk-xwswMtz7J7JMvSekepoLwJejF72PJZYbqWqeB2wFdCGDo8rr"
-MODEL_ID = "gpt-5.4"  # Укажи нужный ID модели
+GLM_API_KEY = "sk-ttSmmsyLEXypai1vOZveMirRCDzq4jp8iQqP5i9xF0Tv4BIB"
+MODEL_ID = "gpt-5.6-terra"  # Укажи нужный ID модели
 # ===============================================
 
 bot = Bot(token=BOT_TOKEN)
