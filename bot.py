@@ -7,8 +7,8 @@ from openai import AsyncOpenAI
 
 # ================= КОНФИГУРАЦИЯ =================
 BOT_TOKEN = "8481958068:AAFE9J7kNfhDCxcmuez6luH-sC-Zii9YQyo"
-GLM_API_KEY = "sk-Fr4DsSTS3QC2Yf8W3ybkqwiimxFJW6z5DDW1A3wEv21IvfZr"
-MODEL_ID = "glm-5-2"  # Укажи нужный ID модели
+GLM_API_KEY = "sk-2RXG2ZoxbkDyDSv1ECu8xUX773eEIR06X4VkWqSsi3Qup5Yo"
+MODEL_ID = "claude-opus-4-8"  # Укажи нужный ID модели
 # ===============================================
 
 bot = Bot(token=BOT_TOKEN)
@@ -17,7 +17,7 @@ dp = Dispatcher()
 # Подключение к API
 glm_client = AsyncOpenAI(
     api_key=GLM_API_KEY,
-    base_url="https://seekai.cc/v1"
+    base_url="https://tabitoken.com/v1"
 )
 
 # Память последних 10 сообщений для каждого чата
