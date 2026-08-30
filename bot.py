@@ -88,13 +88,17 @@ async def handle_messages(message: types.Message):
 
     if is_pm or is_reply_to_bot or is_mentioned:
         clean_text = message.text.replace(f"@{bot_info.username}", "").strip()
-        user_name = message.from_user.first_name or message.from_user.username or "Участник"
+        
+        # Формирование подробных метаданных отправителя (имя, @username и уникальный Telegram ID)
+        user = message.from_user
+        username_str = f"@{user.username}" if user.username else "Без юзернейма"
+        user_info = f"{user.full_name} (Username: {username_str}, ID: {user.id})"
         
         # Индикатор набора текста
         await bot.send_chat_action(message.chat.id, "typing")
         
         try:
-            answer = await get_glm_response(message.chat.id, clean_text, user_name)
+            answer = await get_glm_response(message.chat.id, clean_text, user_info)
             await message.reply(answer)
         except Exception as e:
             await message.reply(f"⚠️ Ошибка запроса к нейросети ({MODEL_ID}): {str(e)}")
