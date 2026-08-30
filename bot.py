@@ -7,8 +7,8 @@ from openai import AsyncOpenAI
 
 # ================= КОНФИГУРАЦИЯ =================
 BOT_TOKEN = "8481958068:AAFE9J7kNfhDCxcmuez6luH-sC-Zii9YQyo"
-GLM_API_KEY = "sk-usoNqhK6OKMBi8zBC9eGI4gbR6ZL4BeU1kzkJ47tWj5wF1Xf"
-MODEL_ID = "gemini-3.7-flash"  # Укажи нужный ID модели
+GLM_API_KEY = "sk-xwswMtz7J7JMvSekepoLwJejF72PJZYbqWqeB2wFdCGDo8rr"
+MODEL_ID = "gpt-5.4"  # Укажи нужный ID модели
 # ===============================================
 
 bot = Bot(token=BOT_TOKEN)
@@ -17,7 +17,7 @@ dp = Dispatcher()
 # Подключение к API
 glm_client = AsyncOpenAI(
     api_key=GLM_API_KEY,
-    base_url="https://api.now.cc/v1"
+    base_url="https://newapi.cursorlao.online/v1"
 )
 
 # Память последних 10 сообщений для каждого чата
